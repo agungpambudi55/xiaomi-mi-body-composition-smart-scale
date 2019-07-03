@@ -22,6 +22,9 @@ def handleData(handle, value):
         else:
             print('Weight {} kg'.format(weight))    
 
+        if isStabilized:
+            print('Stabilized')
+
 try:
     adapter = pygatt.GATTToolBackend(hci_device='hci0')
     adapter.start()

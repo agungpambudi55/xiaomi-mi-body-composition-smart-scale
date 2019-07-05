@@ -25,6 +25,30 @@ def handleData(handle, value):
         if isStabilized:
             print('Stabilized')
 
+        if hasImpedance:
+            height = 175
+            age = 25
+            sex = 'men'
+
+            lib = bodyMetrics(weight, height, age, sex, impedance)
+            
+            print('LBM = {}'.format(lib.getLBMCoefficient()))
+            print('Body fat = {}'.format(lib.getFatPercentage()))
+            print('Body fat scale = {}'.format(lib.getFatPercentageScale()))
+            print('Water = {}'.format(lib.getWaterPercentage()))
+            print('Water scale = {}'.format(lib.getWaterPercentageScale()))
+            print('Bone mass = {}'.format(lib.getBoneMass()))
+            print('Bone mass scale = {}'.format(lib.getBoneMassScale()))
+            print('Muscle mass = {}'.format(lib.getMuscleMass()))
+            print('Muscle mass scale = {}'.format(lib.getMuscleMassScale()))
+            print('Visceral fat = {}'.format(lib.getVisceralFat()))
+            print('Visceral fat scale = {}'.format(lib.getVisceralFatScale()))
+            print('BMI = {}'.format(lib.getBMI()))
+            print('BMI scale = {}'.format(lib.getBMIScale()))
+            print('BMR = {}'.format(lib.getBMR()))
+            print('BMR scale = {}'.format(lib.getBMRScale()))
+            print('Ideal weight = {}'.format(lib.getIdealWeight()))
+
 try:
     adapter = pygatt.GATTToolBackend(hci_device='hci0')
     adapter.start()

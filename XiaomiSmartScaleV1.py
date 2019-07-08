@@ -1,6 +1,11 @@
 '''
 Created on Jul 2019
+
+Contributor :
+- Agung Pambudi <agung.pambudi5595@gmail.com>
+- Azman Latif <azman.latif@mail.ugm.ac.id>
 '''
+
 
 import pygatt
 from XiaomiSmartScaleBodyMetrics import bodyMetrics

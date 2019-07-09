@@ -6,13 +6,12 @@ Contributor :
 - Azman Latif <azman.latif@mail.ugm.ac.id>
 '''
 
-
 import pygatt
 from XiaomiSmartScaleBodyMetrics import bodyMetrics
 
-import logging
-logging.basicConfig()
-logging.getLogger('pygatt').setLevel(logging.DEBUG)
+# import logging
+# logging.basicConfig()
+# logging.getLogger('pygatt').setLevel(logging.DEBUG)
 
 def handleData(handle, value):
     if len(value) == 13:
